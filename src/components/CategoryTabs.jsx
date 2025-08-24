@@ -12,15 +12,15 @@ const CategoryTabs = () => {
 
   return (
     <div className="relative">
-      <div className="flex overflow-x-auto scrollbar-hide pb-2">
-        <div className="flex space-x-2 min-w-max">
+      <div className="flex overflow-x-auto scrollbar-hide pb-4">
+        <div className="flex space-x-4 min-w-max">
           {categories.map((category, index) => (
             <motion.button
               key={index}
-              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                 activeCategory === index
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-pink-300'
               }`}
               onClick={() => setActiveCategory(index)}
               whileHover={{ scale: 1.05 }}
