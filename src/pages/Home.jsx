@@ -11,14 +11,14 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-6 py-8"
+      className="container mx-auto px-8 py-12"
     >
-      <div className="mb-8">
+      <div className="mb-12">
         <CategoryTabs />
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-3 space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+        <div className="lg:col-span-3 space-y-12">
           <Hero />
           <NewsGrid />
         </div>

@@ -5,25 +5,25 @@ const CategoryTabs = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   
   const categories = [
-    'नेता नगरी', 'सेहत', 'किताबवाला', 'गेस्ट इन द न्यूज़रूम', 'दी वलनटॉप शो', 'वलनटॉप बैठकी',
-    'तारीख', 'ट्रिपायारी', 'सॉशल लिस्ट', 'बिजनेस स्टोरीज', 'मौसम', 'न्यूज', 'स्पोर्ट्स',
-    'एंटरटेनमेंट', 'वलनइवास', 'टेक्नोलॉजी', 'सेहत'
+    'Breaking News', 'Politics', 'Business', 'Sports', 'Entertainment', 'Technology',
+    'Health', 'World News', 'Weather', 'Opinion', 'Lifestyle', 'Education',
+    'Science', 'Travel', 'Food', 'Fashion'
   ];
 
   return (
     <div className="relative">
-      <div className="flex overflow-x-auto scrollbar-hide pb-4">
-        <div className="flex space-x-4 min-w-max">
+      <div className="flex overflow-x-auto scrollbar-hide pb-6">
+        <div className="flex space-x-5 min-w-max">
           {categories.map((category, index) => (
             <motion.button
               key={index}
-              className={`px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+              className={`px-8 py-4 rounded-2xl text-lg font-semibold whitespace-nowrap transition-all duration-300 shadow-md ${
                 activeCategory === index
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-pink-300'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg'
               }`}
               onClick={() => setActiveCategory(index)}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

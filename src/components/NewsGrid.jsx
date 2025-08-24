@@ -6,57 +6,57 @@ const NewsGrid = () => {
   const newsItems = [
     {
       id: 1,
-      title: 'जेलेस्की को शोधा दे रहे टंप रूसी मिश्राइल मार रही, लेकिन पुत्तिन ये नहीं कर पा रहा, पता है क्यों?',
+      title: 'Ukraine Crisis: Latest Updates on International Diplomatic Efforts and Peace Negotiations',
       image: 'https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'अंतर्राष्ट्रीय',
-      time: '3 घंटे पहले',
+      category: 'International',
+      time: '3 hours ago',
       isVideo: true
     },
     {
       id: 2,
-      title: 'स्कोपियो दी, बुलेट दी, फिर भी निक्की को जलाकर मार डाला... बहन ने सुनाई आपबीती',
+      title: 'Crime Investigation: Major Breakthrough in High-Profile Case with New Evidence',
       image: 'https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'क्राइम',
-      time: '4 घंटे पहले',
+      category: 'Crime',
+      time: '4 hours ago',
       isVideo: true
     },
     {
       id: 3,
-      title: 'चेतक पुजारा न इडियन क्रिकेट के सभी फॉर्मेट से लिया संन्यास, बोले- हर अच्छी चीज का एक अंत होता है...',
+      title: 'Cricket Legend Announces Retirement from All Formats: End of an Era in Indian Cricket',
       image: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'स्पोर्ट्स',
-      time: '5 घंटे पहले',
+      category: 'Sports',
+      time: '5 hours ago',
       isVideo: false
     },
     {
       id: 4,
-      title: 'नरी ने उपकने वाले के ऊपर लगा दी छलांग, पीछे की नजह पता चलने पर हर कोई कर रहा सलाम',
+      title: 'Viral Video: Heroic Act Goes Viral as Woman Saves Child from Danger',
       image: 'https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpg?auto=compress&cs=tinysrgb&w=400',
-      category: 'वायरल',
-      time: '6 घंटे पहले',
+      category: 'Viral',
+      time: '6 hours ago',
       isVideo: true
     },
     {
       id: 5,
-      title: 'एक मेच तो जरूरी...\' अभी रह गई पुजारा की इच्छा, नहीं मिला ऑन-फील्ड रिटायरमेंट का मौका',
+      title: 'Sports Update: Veteran Player Reflects on Career and Future Plans',
       image: 'https://images.pexels.com/photos/262506/pexels-photo-262506.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'स्पोर्ट्स',
-      time: '7 घंटे पहले',
+      category: 'Sports',
+      time: '7 hours ago',
       isVideo: false
     },
     {
       id: 6,
-      title: 'बेईजान से दुखान, कुत्ते को बुरी तरह पीटा, फिर बाइक से बांधकर कई किमी तक घसीटा',
+      title: 'Animal Rights: Investigation into Animal Cruelty Case Sparks Public Outrage',
       image: 'https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'सोशल',
-      time: '8 घंटे पहले',
+      category: 'Social',
+      time: '8 hours ago',
       isVideo: true
     }
   ];
 
   return (
     <motion.div 
-      className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      className="grid grid-cols-1 md:grid-cols-2 gap-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}

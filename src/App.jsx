@@ -14,14 +14,14 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <Header />
         
         <motion.main 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="pt-20 min-h-screen"
+          className="pt-24 min-h-screen"
         >
           <Routes>
             <Route path="/" element={<Home />} />

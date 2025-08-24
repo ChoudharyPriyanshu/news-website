@@ -1,64 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Car, Zap, Fuel, Users, Calendar } from 'lucide-react';
+import { Car, Zap, Fuel, Users, Calendar, TrendingUp } from 'lucide-react';
 
 const Wheels = () => {
   const carNews = [
     {
       id: 1,
-      title: 'नई Maruti Suzuki Swift 2024 लॉन्च, जानें कीमत और फीचर्स',
+      title: 'New Maruti Suzuki Swift 2024 Launch: Price and Features Revealed',
       image: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'लॉन्च',
-      date: '2 दिन पहले',
-      price: '₹6.5 लाख से शुरू'
+      category: 'Launch',
+      date: '2 days ago',
+      price: 'Starting from $8,500',
+      trending: true
     },
     {
       id: 2,
-      title: 'Tesla Model 3 भारत में जल्द, इलेक्ट्रिक कार की दुनिया में नया दौर',
+      title: 'Tesla Model 3 Coming to India Soon: Electric Revolution Begins',
       image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'इलेक्ट्रिक',
-      date: '1 दिन पहले',
-      price: '₹40 लाख (अनुमानित)'
+      category: 'Electric',
+      date: '1 day ago',
+      price: 'Expected $52,000',
+      trending: true
     },
     {
       id: 3,
-      title: 'Mahindra Thar 5-Door की तस्वीरें आईं सामने, देखें कैसा दिखेगा',
+      title: 'Mahindra Thar 5-Door Spotted: First Look at the Extended Version',
       image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'अपकमिंग',
-      date: '3 दिन पहले',
-      price: '₹15 लाख (अनुमानित)'
+      category: 'Upcoming',
+      date: '3 days ago',
+      price: 'Expected $19,500',
+      trending: false
     },
     {
       id: 4,
-      title: 'Honda City Hybrid भारत में टेस्टिंग, मिलेगी शानदार माइलेज',
+      title: 'Honda City Hybrid Testing in India: Exceptional Fuel Economy Expected',
       image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'हाइब्रिड',
-      date: '4 दिन पहले',
-      price: '₹12 लाख (अनुमानित)'
+      category: 'Hybrid',
+      date: '4 days ago',
+      price: 'Expected $15,600',
+      trending: false
     },
     {
       id: 5,
-      title: 'Royal Enfield Himalayan 450 रिव्यू: एडवेंचर का नया राजा',
+      title: 'Royal Enfield Himalayan 450 Review: The New Adventure King',
       image: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'बाइक',
-      date: '5 दिन पहले',
-      price: '₹2.8 लाख'
+      category: 'Motorcycle',
+      date: '5 days ago',
+      price: '$3,600',
+      trending: false
     },
     {
       id: 6,
-      title: 'Hyundai Creta Facelift 2024: नए लुक के साथ आएगी अपडेटेड Creta',
+      title: 'Hyundai Creta Facelift 2024: Updated Design and New Features',
       image: 'https://images.pexels.com/photos/1719648/pexels-photo-1719648.jpeg?auto=compress&cs=tinysrgb&w=600',
-      category: 'फेसलिफ्ट',
-      date: '1 सप्ताह पहले',
-      price: '₹11 लाख से शुरू'
+      category: 'Facelift',
+      date: '1 week ago',
+      price: 'Starting from $14,300',
+      trending: false
     }
   ];
 
   const categories = [
-    { name: 'सभी', icon: Car, count: 156 },
-    { name: 'इलेक्ट्रिक', icon: Zap, count: 45 },
-    { name: 'पेट्रोल', icon: Fuel, count: 89 },
-    { name: 'SUV', icon: Users, count: 67 }
+    { name: 'All', icon: Car, count: 156, color: 'bg-blue-500' },
+    { name: 'Electric', icon: Zap, count: 45, color: 'bg-green-500' },
+    { name: 'Petrol', icon: Fuel, count: 89, color: 'bg-orange-500' },
+    { name: 'SUV', icon: Users, count: 67, color: 'bg-purple-500' }
   ];
 
   return (
@@ -66,44 +72,45 @@ const Wheels = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-6 py-8"
+      className="container mx-auto px-8 py-12"
     >
-      <div className="mb-12">
+      {/* Header Section */}
+      <div className="text-center mb-16">
         <motion.h1 
-          className="text-4xl font-bold text-gray-800 mb-4"
-          initial={{ opacity: 0, y: -20 }}
+          className="text-5xl font-bold text-gray-900 mb-6"
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          पहिए - ऑटो न्यूज़
+          Wheels - Auto News
         </motion.h1>
         <motion.p 
-          className="text-lg text-gray-600 max-w-2xl"
+          className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          कारों और बाइकों की दुनिया की ताज़ा खबरें, रिव्यू और लॉन्च अपडेट्स
+          Latest updates from the automotive world - cars, bikes, reviews, and launch updates
         </motion.p>
       </div>
 
-      {/* Categories */}
-      <div className="mb-8">
-        <div className="flex flex-wrap gap-4">
+      {/* Categories Filter */}
+      <div className="mb-12">
+        <div className="flex flex-wrap justify-center gap-6">
           {categories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <motion.button
                 key={category.name}
-                className="flex items-center space-x-2 bg-white px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+                className={`flex items-center space-x-3 ${category.color} text-white px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <IconComponent className="w-5 h-5 text-blue-600" />
-                <span className="font-medium text-gray-700">{category.name}</span>
-                <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-semibold">
+                <IconComponent className="w-6 h-6" />
+                <span className="font-semibold text-lg">{category.name}</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-bold">
                   {category.count}
                 </span>
               </motion.button>
@@ -113,57 +120,70 @@ const Wheels = () => {
       </div>
 
       {/* News Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {carNews.map((news, index) => (
           <motion.div
             key={news.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+            className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -8 }}
           >
-            <div className="relative">
+            <div className="relative overflow-hidden">
               <img 
                 src={news.image} 
                 alt={news.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover transition-transform duration-500 hover:scale-110"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+              
+              {/* Category Badge */}
               <div className="absolute top-4 left-4">
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  news.category === 'इलेक्ट्रिक' ? 'bg-green-500 text-white' :
-                  news.category === 'लॉन्च' ? 'bg-blue-500 text-white' :
-                  news.category === 'अपकमिंग' ? 'bg-orange-500 text-white' :
-                  news.category === 'हाइब्रिड' ? 'bg-purple-500 text-white' :
-                  news.category === 'बाइक' ? 'bg-red-500 text-white' :
-                  'bg-gray-500 text-white'
+                <span className={`px-4 py-2 rounded-full text-sm font-bold text-white ${
+                  news.category === 'Electric' ? 'bg-green-500' :
+                  news.category === 'Launch' ? 'bg-blue-500' :
+                  news.category === 'Upcoming' ? 'bg-orange-500' :
+                  news.category === 'Hybrid' ? 'bg-purple-500' :
+                  news.category === 'Motorcycle' ? 'bg-red-500' :
+                  'bg-gray-500'
                 }`}>
                   {news.category}
                 </span>
               </div>
+
+              {/* Trending Badge */}
+              {news.trending && (
+                <div className="absolute top-4 right-4">
+                  <div className="bg-red-500 text-white px-3 py-1 rounded-full flex items-center space-x-1">
+                    <TrendingUp className="w-4 h-4" />
+                    <span className="text-sm font-bold">Trending</span>
+                  </div>
+                </div>
+              )}
             </div>
             
-            <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-3 leading-tight">
+            <div className="p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2">
                 {news.title}
               </h3>
               
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2 text-gray-500 text-sm">
-                  <Calendar className="w-4 h-4" />
-                  <span>{news.date}</span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-2 text-gray-500">
+                  <Calendar className="w-5 h-5" />
+                  <span className="font-medium">{news.date}</span>
                 </div>
-                <span className="text-lg font-bold text-green-600">
+                <span className="text-2xl font-bold text-green-600">
                   {news.price}
                 </span>
               </div>
               
               <motion.button 
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-2xl font-semibold text-lg hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                पूरी खबर पढ़ें
+                Read Full Story
               </motion.button>
             </div>
           </motion.div>

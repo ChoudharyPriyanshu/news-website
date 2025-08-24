@@ -15,13 +15,13 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">N</span>
+              <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-2xl">N</span>
               </div>
-              <span className="text-2xl font-bold">NewsChannel</span>
+              <span className="text-3xl font-bold">NewsChannel</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              भारत की सबसे तेज़ और भरोसेमंद न्यूज़ वेबसाइट। हम आपको हर पल की ताज़ा खबरें प्रदान करते हैं।
+              India's fastest and most trusted news website. We provide you with the latest news updates every moment.
             </p>
           </motion.div>
 
@@ -32,9 +32,9 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-xl font-semibold">क्विक लिंक्स</h3>
+            <h3 className="text-xl font-semibold">Quick Links</h3>
             <ul className="space-y-3 text-gray-400">
-              {['होम', 'न्यूज़', 'स्पोर्ट्स', 'मनोरंजन', 'बिजनेस', 'टेक्नोलॉजी'].map((link) => (
+              {['Home', 'News', 'Sports', 'Entertainment', 'Business', 'Technology'].map((link) => (
                 <li key={link}>
                   <a href="#" className="hover:text-white transition-colors hover:translate-x-2 inline-block">
                     {link}
@@ -51,7 +51,7 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-xl font-semibold">संपर्क</h3>
+            <h3 className="text-xl font-semibold">Contact</h3>
             <div className="space-y-4 text-gray-400">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5" />
@@ -63,7 +63,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5" />
-                <span>नई दिल्ली, भारत</span>
+                <span>New Delhi, India</span>
               </div>
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h3 className="text-xl font-semibold">फॉलो करें</h3>
+            <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex space-x-6">
               {[
                 { icon: Facebook, color: 'hover:text-blue-500' },
@@ -103,7 +103,7 @@ const Footer = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <p>&copy; 2024 NewsChannel. सभी अधिकार सुरक्षित।</p>
+          <p>&copy; 2024 NewsChannel. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

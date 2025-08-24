@@ -5,7 +5,7 @@ import { Play, Clock } from 'lucide-react';
 const NewsCard = ({ news }) => {
   return (
     <motion.div 
-      className="bg-white rounded-xl shadow-lg overflow-hidden news-card-hover cursor-pointer"
+      className="bg-white rounded-3xl shadow-lg overflow-hidden news-card-hover cursor-pointer border border-gray-100"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
@@ -13,23 +13,23 @@ const NewsCard = ({ news }) => {
         <img 
           src={news.image} 
           alt={news.title}
-          className="w-full h-48 object-cover"
+          className="w-full h-56 object-cover transition-transform duration-500 hover:scale-110"
         />
         {news.isVideo && (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
             <motion.div 
-              className="bg-white/90 rounded-full p-3 shadow-lg"
+              className="bg-white/95 rounded-full p-4 shadow-xl backdrop-blur-sm"
               whileHover={{ scale: 1.1 }}
             >
-              <Play className="w-6 h-6 text-red-600" />
+              <Play className="w-8 h-8 text-red-600" />
             </motion.div>
           </div>
         )}
-        <div className="absolute top-3 left-3">
-          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-            news.category === 'ब्रेकिंग न्यूज़' ? 'bg-red-600 text-white' :
-            news.category === 'स्पोर्ट्स' ? 'bg-blue-600 text-white' :
-            news.category === 'अंतर्राष्ट्रीय' ? 'bg-purple-600 text-white' :
+        <div className="absolute top-4 left-4">
+          <span className={`px-4 py-2 rounded-full text-sm font-bold ${
+            news.category === 'Breaking News' ? 'bg-red-600 text-white' :
+            news.category === 'Sports' ? 'bg-blue-600 text-white' :
+            news.category === 'International' ? 'bg-purple-600 text-white' :
             'bg-gray-800 text-white'
           }`}>
             {news.category}
@@ -37,13 +37,13 @@ const NewsCard = ({ news }) => {
         </div>
       </div>
       
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800 mb-3 line-clamp-3 leading-snug">
+      <div className="p-8">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2 leading-tight">
           {news.title}
         </h3>
         
-        <div className="flex items-center text-gray-500 text-sm">
-          <Clock className="w-4 h-4 mr-1" />
+        <div className="flex items-center text-gray-500 text-lg">
+          <Clock className="w-5 h-5 mr-2" />
           <span>{news.time}</span>
         </div>
       </div>
